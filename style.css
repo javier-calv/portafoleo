@@ -181,22 +181,21 @@ p {
 .footer-contacto {
     width: 100vw;
     left: 0;
-    background: #37badb; /* Solo azul */
+    background: #37badb;
     color: #fff;
-    padding: 40px 0 30px 0;
+    padding: 50px 0 40px 0;
     text-align: center;
     border-radius: 0;
     margin-top: 0;
     box-shadow: 0 -4px 16px rgba(55,186,219,0.08);
     position: relative;
     z-index: 2;
-    /* Asegura que el footer esté por encima del fondo */
 }
 
 /* Título del footer */
 .footer-contacto h2 {
-    margin-bottom: 25px;
-    font-size: 28px;
+    margin-bottom: 30px;
+    font-size: 32px;
     color: #fff;
     letter-spacing: 1px;
 }
@@ -205,7 +204,7 @@ p {
 .botones-contacto {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -213,23 +212,23 @@ p {
 .btn-contacto {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: #fff;
     color: #37badb;
     border: none;
     border-radius: 30px;
-    padding: 14px 28px;
-    font-size: 18px;
+    padding: 16px 32px;
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 2px 8px rgba(55,186,219,0.15);
+    box-shadow: 0 2px 12px rgba(55,186,219,0.15);
     transition: background 0.2s, color 0.2s, transform 0.1s;
     cursor: pointer;
 }
 
 /* Icono dentro del botón de contacto */
 .btn-contacto i {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 /* Hover para botón de email */
@@ -249,12 +248,38 @@ p {
 }
 
 /* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+    .proyectos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
 @media (max-width: 600px) {
-    .botones-contacto {
-        flex-direction: column;
-        gap: 15px;
+    section,
+    .proyectos {
+        padding: 16px 4vw;
+        margin: 18px 0;
+        border-radius: 10px;
+    }
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        max-width: 100%;
+    }
+    .proyecto {
+        padding: 18px 10px;
+        font-size: 16px;
     }
     .footer-contacto {
-        border-radius: 0;
+        padding: 28px 0 20px 0;
+    }
+    .footer-contacto h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+    .btn-contacto {
+        font-size: 16px;
+        padding: 12px 18px;
     }
 }
